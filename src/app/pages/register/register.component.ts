@@ -41,7 +41,7 @@ export class RegisterComponent {
     const rawFrom=this.form.getRawValue()
     this.authService.register(rawFrom.email,rawFrom.username,rawFrom.password).subscribe({
     next:()=>{
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/list');
       this.openSnackBar("Sikeres regisztráció", this.actionValue);
     },
     error:(err)=>{
