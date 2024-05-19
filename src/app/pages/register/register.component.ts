@@ -20,7 +20,14 @@ export class RegisterComponent {
  constructor(private snackbar:MatSnackBar) {
  }
   openSnackBar(message: string, action: string) {
-    this.snackbar.open(message, action,{duration:60000});
+    this.snackbar.open(message, action,
+      {
+                panelClass:['custom-snackbar'],
+                duration:60000,
+                verticalPosition:'bottom',
+                horizontalPosition:'center'
+
+    });
   }
   public messageSnack="Sikeres regisztráció";
   public actionValue="OK";
@@ -42,7 +49,7 @@ export class RegisterComponent {
     this.authService.register(rawFrom.email,rawFrom.username,rawFrom.password).subscribe({
     next:()=>{
       this.router.navigateByUrl('/list');
-      this.openSnackBar("Sikeres regisztráció", this.actionValue);
+
     },
     error:(err)=>{
       this.openSnackBar("Sikertelen regisztráció",this.actionValue);
