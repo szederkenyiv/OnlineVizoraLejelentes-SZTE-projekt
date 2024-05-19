@@ -1,3 +1,8 @@
+Teszt email: tesztelek@tesztelek.com
+Tesz jelszó: tesztelek
+
+Regisztrációnál 6 karakternél hosszabb jelszót kell megadni különben a firebase auth nem fogja engedni a regisztrációt.
+
 Fordítási hiba nincs:
  - nálam nem volt, kérlek keress meg ha nálad igen
    
@@ -39,7 +44,8 @@ Legalább 10 különböző Material elem helyes használata.
 - mat-list-item: src/app/pages/list/list.component.html:5
 - matInput: src/app/pages/add/add.component.html:27
 - matTextarea: src/app/pages/add/add.component.html:10
-
+- matSnackBar: src/app/pages/register/register.component.ts:20
+  
 Adatbevitel Angular form-ok segítségével megvalósítva (legalább 2)
 - src/app/pages/login/login.component.html:15
 - src/app/pages/register/register.component.html:13
