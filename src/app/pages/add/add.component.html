@@ -6,14 +6,16 @@
     <div>
       <div class="form-group">
         <label for="title">Vízóra gyári száma:</label>
-        <input
+        <textarea
+          matTextarea
           type="text"
           class="form-control"
           id="title"
           required
           [(ngModel)]="waterMeterClass.title"
           name="title"
-        />
+
+        ></textarea>
       </div>
 
       <div class="form-group">
@@ -24,10 +26,11 @@
           required
           [(ngModel)]="waterMeterClass.description"
           name="description"
+          matInput
         />
       </div>
 
-      <button (click)="saveWaterMeter()" class="btn-success">Submit</button>
+      <button mat-flat-button (click)="saveWaterMeter()" class="btn-success">Bediktálás</button>
     </div>
 </div>
 

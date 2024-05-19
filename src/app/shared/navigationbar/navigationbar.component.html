@@ -17,7 +17,7 @@
       <a routerLink="/register" class="nav-link">Regisztráció</a>
     </li>
     <li class="button-item" *ngIf="isLoggedIn">
-      <button (click)="logout()" class="btn-logout">Kijelentkezés</button>
+      <button mat-button (click)="logout()" class="btn-logout">Kijelentkezés</button>
     </li>
   </div>
 </nav>

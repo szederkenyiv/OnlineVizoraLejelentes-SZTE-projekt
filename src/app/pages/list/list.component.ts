@@ -8,11 +8,12 @@ import {FormBuilder} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {AuthService} from "../../shared/services/auth.service";
 import {Router} from "@angular/router";
+import {MatList, MatListItem} from "@angular/material/list";
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CommonModule, DetailsComponent],
+  imports: [CommonModule, DetailsComponent, MatList, MatListItem],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -59,5 +60,8 @@ export class ListComponent implements OnInit{
   setActiveWaterMeter(waterMeter: WaterMeterClass, index: number): void {
     this.currentWaterMeter = waterMeter;
     this.currentIndex = index;
+  }
+  trackById(index: number, item: WaterMeterClass): any {
+    return item.id ? item.id : index;
   }
 }

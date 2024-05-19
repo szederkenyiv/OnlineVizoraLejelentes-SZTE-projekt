@@ -65,11 +65,13 @@
 
 }
 .form-group label[for="title"],
-.form-group input[name="title"],
+.form-group textarea[name="title"],
 .form-group label[for="description"],
 .form-group input[name="description"],
 .btn-success
  {
   margin-left: 10%; /* A jobbra történő elmozgatás mértéke */
 }
-
+.btn-success{
+  background: #81c63f;
+}

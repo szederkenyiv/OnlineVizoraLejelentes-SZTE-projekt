@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import {WaterMeterClass} from "../model/WaterMeter.class";
 import {WaterMeterService} from "../services/WaterMeter.service";
 import {FormsModule} from "@angular/forms";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatButton],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })

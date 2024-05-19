@@ -3,6 +3,7 @@ import {NavigationEnd, Router, RouterLink, RouterOutlet} from "@angular/router";
 import {Subscription} from "rxjs";
 import {CommonModule, NgIf} from "@angular/common";
 import {AuthService} from "../services/auth.service";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-navbar', // a komponens a sablonban ezen a néven lesz hivatkozva
@@ -11,7 +12,8 @@ import {AuthService} from "../services/auth.service";
   imports: [
     RouterOutlet,
     RouterLink,
-    NgIf
+    NgIf,
+    MatButton
   ],
   // a komponens HTML sablonjának fájlneve
   styleUrls: ['./navigationbar.component.css'] // a komponens CSS stílusfájljának fájlneve
