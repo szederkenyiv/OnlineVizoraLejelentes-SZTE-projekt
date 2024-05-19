@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "dist/app/browser",
+    "ignore": [
+      "**/.*"
+
+    ],
+    "rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ]
+  }
+}
