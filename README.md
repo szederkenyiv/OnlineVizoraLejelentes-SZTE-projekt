@@ -84,5 +84,5 @@ Legalább 2 route levédése azonosítással (AuthGuard) (ahol ennek értelme va
       - src/app/pages/add/add.component.ts:20
 
 Szubjektív pontozás a projekt egészére vonatkozólag (mennyire fedi le a projekt a témakört (mennyire kapcsolódik hozzá), mennyi lehet a befektetett energia a projektben)
-- pls a 28 pont legyen meg 
+- pls a minimum pont legyen meg 
 Discord: szedis
