@@ -1,27 +1,82 @@
-# App
+Fordítási hiba nincs:
+ - nálam nem volt, kérlek keress meg ha nálad igen
+   
+Futtatási hiba nincs
+- nálam nem volt, kérlek keress meg ha nálad igen
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Firebase Hosting URL (létezik, és minden végpont megfelelő módon betöltődik):
+- https://vizora-f3996.web.app
+- végpontok: /home,/login,/register,/list,/add (az authquard miatt nem fogod elérni a /list, /add csak ha bejelentkezel)
 
-## Development server
+Adatmodell definiálása (legalább 4 TypeScript interfész vagy class formájában (ugyanennyi kollekció))
+- src/app/shared/model/user.interface.ts
+- src/app/shared/model/WaterMeter.class.ts
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Alkalmazás felbontása megfelelő számú komponensre (egyetlen komponens TS és HTML kódja sem haladja meg a 250 sort és soronként a 400 karaktert)
+- nem haladja meg
 
-## Code scaffolding
+Reszponzív, mobile-first felület (minden adat látható és jól jelenik meg böngészőben is, mobil nézetben is)
+- nálam működött
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Legalább 2 különböző attribútum direktíva használata
+- src/app/pages/list/list.component.html:8
+- src/app/pages/login/login.component.html:15
 
-## Build
+Legalább 2 különböző strukturális direktíva használata
+- *ngIf src/app/shared/navigationbar/navigationbar.component.html:3
+- *ngFor src/app/pages/list/list.component.html:6
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Adatátadás szülő és gyermek komponensek között (legalább 1 @Input és 1 @Output)
+- @Input src/app/shared/details/details.component.ts:17
+- @Output src/app/shared/details/details.component.ts:18
 
-## Running unit tests
+Legalább 10 különböző Material elem helyes használata.
+- mat-button: src/app/shared/navigationbar/navigationbar.component.html:20
+- mat-flat-button: src/app/pages/add/add.component.html:31
+- mat-raised-button: src/app/shared/details/details.component.html:29
+- mat-stroked-button: src/app/shared/details/details.component.html:33
+- mat-list: src/app/pages/list/list.component.html:4
+- mat-list-item: src/app/pages/list/list.component.html:5
+- matInput: src/app/pages/add/add.component.html:27
+- matTextarea: src/app/pages/add/add.component.html:10
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Adatbevitel Angular form-ok segítségével megvalósítva (legalább 2)
+- src/app/pages/login/login.component.html:15
+- src/app/pages/register/register.component.html:13
 
-## Running end-to-end tests
+Legalább 1 saját Pipe osztály írása és használata
+- A megírt osztály: src/app/shared/Pipes
+- A használata: src/app/pages/list/list.component.html:11
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Legalább 2 különböző Lifecycle Hook használata a teljes projektben (értelmes tartalommal, nem üresen)
+- src/app/shared/navigationbar/navigationbar.component.ts:46 
+- src/app/shared/navigationbar/navigationbar.component.ts:32 
 
-## Further help
+CRUD műveletek mindegyike megvalósult (Promise, Observable használattal)
+- Create: src/app/shared/services/auth.service.ts:21
+- Read: src/app/shared/services/WaterMeter.service.ts:19
+- Update:src/app/shared/services/WaterMeter.service.ts:27
+- Delete:src/app/shared/services/WaterMeter.service.ts:31
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+CRUD műveletek service-ekbe vannak kiszervezve és megfelelő módon injektálva lettek
+- src/app/shared/services/auth.service.ts
+- src/app/shared/services/WaterMeter.service.ts
+
+Firestore adatbázis használata az adatokhoz (integráció, környezeti változók használata helyes legyen)
+- src/app/app.module.ts:24
+
+Legalább 2 komplex Firestore lekérdezés megvalósítása (ide tartoznak: where feltétel, rendezés, léptetés, limitálás)
+- nincs
+
+Legalább 4 különböző route a különböző oldalak eléréséhez
+- src/app/app.routes.ts
+- A routeolt oldalak: register, login, home, add, list
+
+Legalább 2 route levédése azonosítással (AuthGuard) (ahol ennek értelme van, pl.: egy fórum témakör megtekinthető bárki számára, de a regisztrált felhasználó adatai nem)
+- A list és az add oldal csak bejelentkezett felhasználók érhetik el:
+      - src/app/pages/list/list.component.ts:33
+      - src/app/pages/add/add.component.ts:20
+
+Szubjektív pontozás a projekt egészére vonatkozólag (mennyire fedi le a projekt a témakört (mennyire kapcsolódik hozzá), mennyi lehet a befektetett energia a projektben)
+- pls a 28 pont legyen meg 
+Discord: szedis
