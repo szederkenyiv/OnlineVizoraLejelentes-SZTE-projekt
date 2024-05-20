@@ -1,3 +1,4 @@
+Bejelentkezésnél előfordul, hogy elsőre nem enged át ilyenkor ráfrissítés nélkül loginolj mégegyszer!
 Teszt email: tesztelek@tesztelek.com
 Tesz jelszó: tesztelek
 
